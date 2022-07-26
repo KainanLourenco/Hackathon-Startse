@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset CSS */
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    
+}
+
+/* General */
+
+:root{
+    --primary-color: #1B4A58;
+    --secondary-color: #D8EAA9;
+    --hover-color: #919e76;
+}
+
+/* Main */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100vh;
+}
+
+/* Logo */
+
+#logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+/* Form */
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-container #apresentation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+#form-container h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+form{
+    width: 400px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input[type="text"]{
+    height: 35px;
+    border: 1px solid #E4E7EB;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 10px 0 20px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.5s ease;
+}
+
+button:hover{
+    background-color: #2b7186;
+}
+
+form p{
+    text-align: center;
+}
+
+form p a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+form p a:hover{
+    border-bottom: 2px solid black;
+}
+
+/* Right side */
+
+#background{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+}
+
+#background-overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 4%;
+    right: 2%;
+    width: 45vw;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(13.5px);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 30px 20px;
+    color: white;
+}
+
+#background-overlay h4{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+#background-overlay p{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+#background-overlay span h5:nth-child(2){
+    font-weight: 400;
+    margin-top: 5px;
+    color: rgb(221, 216, 216);
+}
+
+#quote{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+}
+
+/* Medias Queries*/
+
+@media only screen and (max-width: 885px){
+    #background-overlay, #background{
+        display: none;
+    }
+
+    main{
+        width: 100vw;
+    }
+}
