@@ -1,0 +1,237 @@
+/* Reset CSS */
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    
+}
+
+/* General */
+
+:root{
+    --primary-color: #1B4A58;
+    --secondary-color: #D8EAA9;
+    --hover-color: #919e76;
+}
+
+/* NavBar */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+}
+
+nav img{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav a:hover{
+    color: var(--hover-color);
+}
+
+nav ul li:last-child{
+    display: none;
+}
+
+#welcome{
+    text-transform: capitalize;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* Main */
+
+main{
+    padding: 3% 5%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #F5F5F8;
+}
+
+main > h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.financier{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.type{
+    margin-bottom: 5px;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.value span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-120%);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.value{
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transform: translateX(6%);
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.select button{
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.5s ease ;
+    cursor: pointer
+}
+
+.select button:hover{
+    background-color: #2b7186;;
+}
+
+/* Add and Delete Btns */
+
+.btn{
+    padding: 10px;
+    width: 150px;
+    height: 35px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    transition: background-color 0.5s ease ;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #2b7186;
+}
+
+/* Add Window */
+
+#add-modal{   
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    border-top: 5px solid var(--primary-color);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -500%);
+    transition: transform 1s ease-in-out;
+}
+
+#add-modal h4{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+#input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#input-container label{
+    margin: 10px 0;
+}
+
+#input-container input{
+    height: 35px;
+    border: 1px solid #E4E7EB;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#add-btn{
+    align-self: flex-end;
+    margin-top: 30px;
+}
+
+/* Modal Top */
+
+#modal-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+#modal-top img{
+    width: 25px;
+    height: 25px;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 450px){
+    .product{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Header */
+
+    header{
+        min-height: 0;
+    }
+
+    header nav ul li{
+        display: none;
+    }
+
+    header nav ul li:last-child{
+        display: block;
+    }
+}
