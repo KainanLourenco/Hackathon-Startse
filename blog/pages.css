@@ -41,6 +41,10 @@ nav ul{
     gap: 20px;
 }
 
+nav ul li:last-child{
+    display: none;
+}
+
 nav a{
     text-decoration: none;
     text-transform: uppercase;
@@ -49,6 +53,43 @@ nav a{
 
 nav a:hover{
     color: var(--hover-color);
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s ease-in-out;
+}
+
+.sidebar a {
+    text-decoration: none;
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: rgb(189, 189, 189);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
 }
 
 /* Content header */
@@ -190,18 +231,26 @@ main {
 /* Media queries */
 
 @media only screen and (max-width: 700px) {
-    nav ul {
+    nav ul li {
         display: none;
     }
+
+    header nav ul li:last-child{
+        display: block;
+    }
+
     .content-header {
         width: 90%;
     }
+
     .content {
         width: 90%;
     }
+
     .articles {
         flex-direction: column;
     }
+
     .articles article {
         width: 100%;
         margin-bottom: 20px;
