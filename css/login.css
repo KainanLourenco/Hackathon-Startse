@@ -73,7 +73,7 @@ label{
     margin-bottom: 10px;
 }
 
-input[type="text"]{
+input{
     height: 35px;
     border: 1px solid #E4E7EB;
     border-radius: 5px;

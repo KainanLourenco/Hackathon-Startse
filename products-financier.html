@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/products.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/icon.png" alt="logo"></a>
+            <ul>
+                <li><a href="#">Quem somos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Seus produtos</a></li>
+                <li><a id="welcome">Bem-vindo, Nome</a></li>
+                <li><a href="#"><img src="images/menu-bar-icon.png"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Seus Produtos</h2>
+        <button type="button" class="btn" id="add">Adicionar</button>
+        <div id="product-container">
+            <div class="product">
+                <span class="financier">
+                <img src="images/user-icon.png">
+                <h5>Financiador</h5>
+                </span>
+                <span>
+                <h4 class="type">Tipo do produto</h4>
+                <h5 class="details">Detalhes do produto</h5>
+                </span>
+                <span class="date">
+                <h5>Data de expiração</h5>
+                <h5>01/01/2000</h5>
+                </span>
+                <span class="select">
+                <h5 class="value"><span>R$</span> 00,00</h5>
+                <button type="button">Excluir</button>
+                </span>
+            </div>
+            
+        
+        <div id="add-modal">
+            <div id="modal-top">
+            <h4>Adicionar produto</h4>
+            <img src="images/close-icon.png" id="close">
+            </div>
+            <div id="input-container">
+                <label for="product-name">Nome</label>
+                <input type="text" id="product-name">
+                <label for="product-type">Tipo</label>
+                <input type="text" id="product-type">
+                <label for="product-details">Detalhes</label>
+                <input type="text" id="product-details">
+                <label for="product-date">Data de expiração</label>
+                <input type="date" id="product-date">
+                <label for="product-value">Valor</label>
+                <input type="number" id="product-value">
+                <button type="button" class="btn" id="add-btn">Adicionar</button>
+            </div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
