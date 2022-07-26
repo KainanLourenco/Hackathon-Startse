@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset CSS */
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+/* General */
+
+:root {
+    --primary-color: #1B4A58;
+    --secondary-color: #D8EAA9;
+    --hover-color: #919e76;
+}
+
+/* NavBar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+}
+
+nav img {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav a:hover {
+    color: var(--hover-color);
+}
+
+/* Articles */
+
+main {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#article-section {
+    width: 75%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 4%;
+    margin: 40px 0;
+}
+
+/* Main article */
+
+.blog-article.main-article {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.blog-article.main-article a img {
+    width: 100%;
+    height: 350px;
+}
+
+.main-article .article-subcontent {
+    width: 35%;
+}
+
+.main-article .post-title {
+    font-size: 1.5rem;
+}
+
+/* Other articles */
+
+.blog-article {
+    width: 48%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    color: rgb(51, 51, 51);
+}
+
+.blog-article:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+}
+
+.blog-article img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+.article-subcontent {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    text-align: justify;
+}
+
+.blog-article:not(:first-child) .article-subcontent {
+    height: 180px;
+}
+
+/* Article content (title, editor, date, ...) */
+
+.main-article .article-subcontent .post-editor,
+.post-editor {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-editor .editor-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-subcontent .post-editor img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.post-date,
+.post-subtext {
+    color: rgb(95, 95, 95);
+}
+
+.post-date {
+    font-size: smaller;
+}
+
+.post-date span {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.article-subcontent a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+
+.article-subcontent a:hover {
+    text-decoration: underline;
+}
+
+.editor-name {
+    font-weight: 600;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 700px) {
+    nav ul {
+        display: none;
+    }
+
+    #article-section {
+        width: 90%;
+        flex-direction: column;
+        margin: 20px 0;
+        gap: 15px;
+    }
+
+    .blog-article {
+        width: 100%;
+    }
+
+    .main-article .article-subcontent .post-editor,
+    .post-editor {
+        position: static;
+    }
+
+    .blog-article.main-article {
+        flex-direction: column;
+    }
+
+    .main-article .article-subcontent {
+        width: 90%;
+    }
+
+    .blog-article.main-article a img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .blog-article:not(:first-child) .article-subcontent {
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+    #article-section {
+        width: 90%;
+    }
+
+    .post-editor {
+        position: static;
+    }
+
+    .blog-article {
+        margin-bottom: 0px;
+    }
+
+    .blog-article:not(:first-child) .article-subcontent {
+        height: auto;
+    }
+
+    .main-article .article-subcontent {
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 880px) {}
