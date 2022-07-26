@@ -18,7 +18,13 @@
     --secondary-color: #D8EAA9;
     --hover-color: #919e76;
 }
-
+#container{
+    background-color: var(--secondary-color);
+}
+#inner-container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
 /* Header */
 
 header{
