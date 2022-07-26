@@ -18,37 +18,75 @@
     --secondary-color: #D8EAA9;
     --hover-color: #919e76;
 }
-
+#container{
+    background-color: var(--secondary-color);
+}
+#inner-container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
 /* Header */
 
 header{
     position: relative;
     min-height: 100vh;
-    background-color: var(--primary-color);
+    /*background-color: var(--primary-color);*/
     color: white;
+    display: flex;
 }
 
 header #model{
     height: clamp(550px, 80%, 650px);
     position: absolute;
-    right: 5%;
+    left: -35%;
     bottom: 0;
+}
+#model{
+    filter: drop-shadow(15px 15px 15px black);
+}
+
+#header-first-section{
+    width: 60%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    position: relative;
+}
+#header-second-section{
+    width: 40%;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    position: relative;
 }
 
 #header-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px 50px;
-    margin-top: 70px;
+    padding: 80px 50px 0 50px;
     gap: 30px;
-    
+    height: 100vh;
+    min-width: 650px;
+    position: relative;
+}
+
+#list-content{
+    max-width: 50%;
+    min-width: 600px;
+    height: 25vh;
+    position: absolute;
+    top: 12.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #header-content h2{
+    width: 100%;
     font-size: 3rem;
     font-weight: 700;
+    margin-bottom: 10px;
 }
+
 
 #header-content input{
     width: 300px;
@@ -85,13 +123,61 @@ header #model{
     background-color: var(--hover-color);
 }
 
+#header-input{
+    max-width: 50%;
+    min-width: 600px;
+    height: 45vh;
+    display: flex;
+    justify-content: space-between;
+    /*border: 1px solid blue;*/
+    position: absolute;
+    top: 45%;
+}
+
+#info-cliente-empresa{
+    min-width: 275px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 10px 10px 15px black;
+    padding: 10px 10px;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#info-cliente-empresa h3{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    text-align: center;
+}
+
+#info-cliente-empresa button{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#info-cliente-empresa button:hover{
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+}
 /* NavBar */
 
 nav{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px 20px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    z-index: 5;
 }
 
 nav img{
@@ -101,23 +187,50 @@ nav img{
 }
 
 nav ul{
+    width: 100%;
     display: flex;
+    justify-content: space-around;
     list-style: none;
-    gap: 20px;
+    gap: 10px;
 }
 
 nav a{
+    box-sizing: border-box;
+   
+    padding: 8px;
+    font-size: 0.8rem;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: var(--primary-color);
 }
 
 nav a:hover{
     color: var(--hover-color);
+    border-bottom: 1px solid var(--primary-color);
 }
 
 nav ul li:last-child{
     display: none;
+}
+
+nav ul li:nth-child(5) a{
+    background-color: rgba(27, 74, 88, 0.2);
+}
+nav ul li:nth-child(5) a:hover{
+    background-color: rgb(27, 74, 88);
+    color: var(--secondary-color);
+    transition: 300ms;
+}
+
+#logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+}
+#logo img{
+    width: auto;
+    height: 40px;
 }
 
 /* How to */
