@@ -13,154 +13,85 @@
 header{
     position: relative;
     min-height: 100vh;
-    /*background-color: var(--primary-color);*/
+    background-color: var(--primary-color);
     color: white;
     display: flex;
+    flex-direction: column;
 }
 
 header #model{
-    height: clamp(550px, 80%, 650px);
+    height: 90%;
     position: absolute;
-    left: -35%;
+    right: 5%;
     bottom: 0;
-}
-#model{
-    filter: drop-shadow(15px 15px 15px black);
-}
-
-#header-first-section{
-    width: 60%;
-    height: 100vh;
-    background-color: var(--primary-color);
-    position: relative;
-}
-#header-second-section{
-    width: 40%;
-    height: 100vh;
-    background-color: var(--secondary-color);
-    position: relative;
 }
 
 #header-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 80px 50px 0 50px;
+    padding: 40px 50px 0 50px;
     gap: 30px;
-    height: 100vh;
-    min-width: 650px;
     position: relative;
 }
 
-#list-content{
-    max-width: 50%;
-    min-width: 600px;
-    height: 25vh;
-    position: absolute;
-    top: 12.5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 #header-content h2{
-    width: 100%;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-
-#header-content input{
-    width: 300px;
-    height: 40px;
-    border-radius: 10px;
-    color: #000000;
-    padding: 10px;
-    outline: none;
-}
-
-#header-content input::placeholder{
-    color: #000000;
-    font-size: .9rem;
-}
-
-#header-content input:focus{
-    border: 4px solid var(--secondary-color);
-}
-
-#header-content button{
-    background-color: var(--secondary-color);
-    width: 250px;
-    height: 40px;
-    border-radius: 10px;
-    margin-left: 10px;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    transition: background-color 0.5s ease;
-    cursor: pointer;
-}
-
-#header-content button:hover{
-    background-color: var(--hover-color);
-}
-
 #header-input{
-    max-width: 50%;
-    min-width: 600px;
     height: 45vh;
     display: flex;
-    justify-content: space-between;
-    /*border: 1px solid blue;*/
-    position: absolute;
-    top: 45%;
+    gap: 30px;
 }
 
-#info-cliente-empresa{
+.customer-company-info{
     min-width: 275px;
     background-color: var(--secondary-color);
     border-radius: 10px;
     height: 100%;
-    box-shadow: 10px 10px 15px black;
     padding: 10px 10px;
     color: var(--primary-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
-#info-cliente-empresa h3{
+.customer-company-info h3{
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     text-align: center;
 }
 
-#info-cliente-empresa button{
-    color: var(--primary-color);
+.customer-company-info button{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     text-align: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-#info-cliente-empresa button:hover{
+.customer-company-info button:hover{
     background-color: var(--hover-color);
-    color: var(--primary-color);
+    color: white; 
 }
 /* NavBar */
 
 nav{
-    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height: 60px;
-    position: absolute;
-    top: 0;
-    z-index: 5;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
 }
 
 nav img{
@@ -169,12 +100,10 @@ nav img{
     border-radius: 5px;
 }
 
-nav ul{
-    width: 100%;
+nav ul {
     display: flex;
-    justify-content: space-around;
     list-style: none;
-    gap: 10px;
+    gap: 20px;
 }
 
 nav a{
@@ -184,7 +113,7 @@ nav a{
     font-size: 0.8rem;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--primary-color);
+    color: white;
 }
 
 nav a:hover{
@@ -197,12 +126,23 @@ nav ul li:last-child{
 }
 
 nav ul li:nth-child(5) a{
-    background-color: rgba(27, 74, 88, 0.2);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: 0.3s ease;
 }
 nav ul li:nth-child(5) a:hover{
-    background-color: rgb(27, 74, 88);
-    color: var(--secondary-color);
-    transition: 300ms;
+    background-color: var(--hover-color);
+    color: white;
+}
+
+nav ul li:nth-child(4) a{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: 0.3s ease;
+}
+nav ul li:nth-child(4) a:hover{
+    background-color: var(--hover-color);
+    color: white;
 }
 
 #nav-logo{
@@ -224,6 +164,7 @@ nav ul li:nth-child(5) a:hover{
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 30px 40px;
+    background-color: white;
 }
 
 #how-to h3{
@@ -288,7 +229,7 @@ nav ul li:nth-child(5) a:hover{
 .item{
     position: relative;
     width: 400px;
-    height: 200px;
+    height: auto;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
     color: var(--primary-color);
     padding: 15px;
@@ -424,6 +365,7 @@ nav ul li:nth-child(5) a:hover{
 
 #blog{
     padding: 40px;
+    background-color: white;
 }
 
 #blog-title h4{
@@ -449,7 +391,6 @@ nav ul li:nth-child(5) a:hover{
 .article{
     display: flex;
     flex-direction: column;
-    position: relative;
     width: 300px;
     height: 360px;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
@@ -461,11 +402,8 @@ nav ul li:nth-child(5) a:hover{
 }
 
 .article-img{
-    position: absolute;
-    top: 0;
-    left: 0;
     background-color: #f3f3f3;
-    width: 300px;
+    width: 100%;
     height: 150px;
 }
 
@@ -473,9 +411,6 @@ nav ul li:nth-child(5) a:hover{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     padding: 20px;
 }
 
