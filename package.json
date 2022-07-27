@@ -1,0 +1,30 @@
+{
+  "name": "hackathon-startse",
+  "version": "1.0.0",
+  "description": "------\r O sistema tem como objetivo fazer a ligação entre quem busca crédito e instituições com crédito a oferecer. Nosso foco é a redução da burocracia e a fazer com que sejam contratados produtos que realmente sejam interessantes para ambas as partes.",
+  "main": "server.js",
+  "bin": {
+    "hackathon-startse": "bin/server.js"
+  },
+  "scripts": {
+    "start": "node ./bin/server.js",
+    "dev": "nodemon .bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KainanLourenco/Hackathon-Startse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KainanLourenco/Hackathon-Startse/issues"
+  },
+  "homepage": "https://github.com/KainanLourenco/Hackathon-Startse#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
