@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* CSS específico para definir características da barra de menu lateral e do footer, que serão usados em múltiplas 
+páginas. Além de configurações gerais e variáveis */
+
+/* Reset CSS */
+
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    
+}
+
+/* General */
+
+:root{
+    --primary-color: #1B4A58;
+    --secondary-color: #D8EAA9;
+    --hover-color: #919e76;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s ease-in-out;
+}
+
+.sidebar a {
+    text-decoration: none;
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: rgb(189, 189, 189);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: var(--primary-color);
+    color: white;
+}
+
+#footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 50px 50px 20px 50px;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+}
+
+#footer-top #logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#footer-top #logo img{
+    width: 50px;
+    height: 50px;
+}
+
+footer  ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer ul li a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+footer ul li a:hover{
+    color: var(--hover-color)
+}
+
+footer #social-media{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer #social-media li:hover{
+    transform: scale(1.05);
+}
+
+footer #social-media img{
+    width: 30px;
+    height: 30px;
+}
+
+footer h5{
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 700px) {
+    #footer-top{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
