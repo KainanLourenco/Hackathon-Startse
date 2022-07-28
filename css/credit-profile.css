@@ -1,0 +1,261 @@
+body{
+    background-color: #f3f3f3;
+}
+
+/* Main */
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+
+#container{
+    position: relative;
+    display: flex;
+    width: 70%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
+}
+
+#container-img{
+    position: relative;
+    width: 50%;
+}
+
+#container-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#container #apresentation{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+#container #apresentation h4{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Logo */
+
+#logo{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+#logo h4{
+    font-weight: 400;
+}
+
+#logo img{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/* Form */
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#form-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+form span{
+    display: flex;
+    flex-direction: column;
+}
+
+form label, #confirm-asset{
+    margin-bottom: 10px;
+}
+
+form select{
+    border: 1px solid #E4E7EB;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+form #amount{
+    display: flex;
+}
+
+form #amount input{
+    width: 90%;
+}
+
+form #estimated{
+    display: flex;
+}
+
+form #estimated input{
+    width: 90%;
+}
+
+input:not(:last-child), select{
+    margin-bottom: 20px;
+}
+
+input[type=text], input[type=number]{
+    width: 300px;
+    height: 35px;
+    border: 1px solid #E4E7EB;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 10px 0 20px 0;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    transition: background-color 0.5s ease;
+}
+
+button:hover{
+    background-color: #2b7186;
+}
+
+/* Assets */
+
+#assets{
+    display: none;
+}
+
+#form-container.active{
+    justify-content: flex-end;
+}
+
+#assets.active{
+    display: block;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 700px) {
+    #container{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #container-img{
+        display: none;
+    }
+
+    #form-container{
+        width: 100%;
+    }
+
+    #form-container.active{
+        justify-content: flex-end;
+    }
+
+    form #amount{
+        display: block;
+    }
+    
+    form #amount input{
+        width: 300px;
+    }
+
+    form #estimated{
+        display: block;
+    }
+    
+    form #estimated input{
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px){
+    #container{
+        width: 90%;
+        height: 90%;
+    }
+
+    #form-container{
+        justify-content: flex-start;
+        width: 100%;
+        height: 60%;
+    }
+
+    #form-container.active{
+        justify-content: flex-start;
+    }
+
+    #container-img img{
+        display: none;
+    }
+
+    #container-img h2, h4{
+        color: black;
+    }
+
+    #container{
+        flex-direction: column-reverse;
+    }
+
+    #container-img{
+        display: flex;
+        align-items: center;
+        align-self: center;
+        position: static;
+        width: 90%;
+        height: 40%;
+    }
+
+    #container #apresentation{
+        position: static;
+        transform: translateY(0);
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    #form-container.active{
+        justify-content: center;
+    }
+}
