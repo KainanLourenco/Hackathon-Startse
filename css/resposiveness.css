@@ -24,7 +24,11 @@
     }
 
     #header-content h2{
-        font-size: 2.9rem;
+        font-size: 2rem;
+    }
+
+    #header-content h2 br{
+        display: none;
     }
 
     #header-input{
