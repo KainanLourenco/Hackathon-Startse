@@ -34,7 +34,7 @@ header #model{
     padding: 40px 50px 0 50px;
     gap: 30px;
     position: relative;
-    min-width: 520px;
+    min-width: 390px;
     max-width: 60%;
 }
 
