@@ -165,7 +165,7 @@ form p a:hover{
 
 /* Medias Queries*/
 
-@media only screen and (max-width: 885px){
+@media only screen and (max-width: 700px){
     #background-overlay, #background{
         display: none;
     }
@@ -173,4 +173,35 @@ form p a:hover{
     main{
         width: 100vw;
     }
+
+    #form-container #apresentation{
+        align-items: center;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    button{
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px){
+    #background-overlay, #background{
+        display: none;
+    }
+
+    main{
+        width: 100vw;
+    }
+
+    #form-container{
+        align-items: center;
+    }
+
+    #form-container #apresentation{
+        align-items: center;
+    }
+
 }
