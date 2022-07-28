@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon.png">
     <link rel="stylesheet" href="css/products.css">
-    <title>Produtos</title>
+    <link rel="stylesheet" href="css/general.css">
+    <title>Seus produtos</title>
 </head>
 <body>
     <header>
         <nav>
             <a href="index.html"><img src="images/icon.png" alt="logo"></a>
             <ul>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Seus produtos</a></li>
+                <li><a href="index.html#about-team">Quem somos</a></li>
+                <li><a href="blog/blog.html">Blog</a></li>
                 <li><a id="welcome">Bem-vindo, Nome</a></li>
                 <li><a href="#"><img src="images/menu-bar-icon.png"></a></li>
             </ul>
         </nav>
+
+        <div class="sidebar">
+            <ul>
+                <a class="closebtn">&times;</a>
+                <li><a href="index.html#about-team">Quem somos</a></li>
+                <li><a href="blog/blog.html">Blog</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <h2>Seus Produtos</h2>
@@ -64,6 +73,7 @@
         </div>
 
     </main>
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/sidebar.js"></script>
 </body>
 </html>

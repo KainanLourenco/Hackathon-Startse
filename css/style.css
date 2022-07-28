@@ -95,8 +95,8 @@ nav{
 }
 
 nav img{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 5px;
 }
 
@@ -108,9 +108,7 @@ nav ul {
 
 nav a{
     box-sizing: border-box;
-   
     padding: 8px;
-    font-size: 0.8rem;
     text-decoration: none;
     text-transform: uppercase;
     color: white;

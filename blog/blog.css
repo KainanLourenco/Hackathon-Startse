@@ -1,24 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-/* Reset CSS */
-
-* {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
-
-}
-
-/* General */
-
-:root {
-    --primary-color: #1B4A58;
-    --secondary-color: #D8EAA9;
-    --hover-color: #919e76;
-}
-
 /* NavBar */
 
 nav {
@@ -39,6 +18,10 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
+}
+
+nav ul li:last-child{
+    display: none;
 }
 
 nav a {
@@ -182,8 +165,12 @@ main {
 /* Media queries */
 
 @media only screen and (max-width: 700px) {
-    nav ul {
+    nav ul li {
         display: none;
+    }
+
+    header nav ul li:last-child{
+        display: block;
     }
 
     #article-section {
@@ -218,6 +205,12 @@ main {
     .blog-article:not(:first-child) .article-subcontent {
         height: auto;
     }
+
+    #footer-top{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
@@ -240,6 +233,8 @@ main {
     .main-article .article-subcontent {
         width: 65%;
     }
-}
 
-@media only screen and (min-width: 700px) and (max-width: 880px) {}
+    footer {
+        margin-top: 100px;
+    }
+}

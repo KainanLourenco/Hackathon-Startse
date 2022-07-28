@@ -1,22 +1,3 @@
-/* Reset CSS */
-
-*{
-    border: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
-    
-}
-
-/* General */
-
-:root{
-    --primary-color: #1B4A58;
-    --secondary-color: #D8EAA9;
-    --hover-color: #919e76;
-}
-
 /* NavBar */
 
 nav{
@@ -83,6 +64,12 @@ main > h2{
     padding: 20px;
     border-radius: 10px;
     background-color: white;
+    transition: 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
 }
 
 .financier{
@@ -211,11 +198,12 @@ main > h2{
 #modal-top img{
     width: 25px;
     height: 25px;
+    cursor: pointer;
 }
 
 /* Media Query */
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 700px){
     .product{
         flex-direction: column;
         gap: 20px;
