@@ -94,10 +94,22 @@ nav{
     background-color: var(--primary-color);
 }
 
-nav img{
+nav > span img{
     width: 30px;
     height: 30px;
     border-radius: 5px;
+}
+
+nav > span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav > span h4{
+    font-weight: 400;
 }
 
 nav ul {
@@ -231,7 +243,6 @@ nav ul li:nth-child(4) a:hover{
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
     color: var(--primary-color);
     padding: 15px;
-    z-index: 1;
 }
 
 .item::before{
@@ -244,7 +255,22 @@ nav ul li:nth-child(4) a:hover{
     color: var(--primary-color);
     opacity: 0.5;
     transform: translate(-50%, -69%);
-    z-index: -1;
+}
+
+.item:nth-child(2):before{
+    content: '02';
+}
+
+.item:nth-child(3):before{
+    content: '03';
+}
+
+.item:nth-child(4):before{
+    content: '04';
+}
+
+.item:nth-child(5):before{
+    content: '05';
 }
 
 #item-container .item h4{
@@ -287,7 +313,7 @@ nav ul li:nth-child(4) a:hover{
     height: 25px;
     border-radius: 50%;
     background-color: var(--primary-color);
-    margin: 170px 0;
+    margin: 260px 0;
     position: relative;
     list-style: none;
 }
@@ -299,7 +325,7 @@ nav ul li:nth-child(4) a:hover{
     left: 50%;
     transform: translateX(-50%);
     width: 5px;
-    height: 200px;
+    height: 300px;
     background-color: var(--primary-color);
     z-index: -1;
 }
@@ -472,6 +498,7 @@ nav ul li:nth-child(4) a:hover{
 .member h6{
     margin-top: 5px;
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .member ul{
@@ -489,11 +516,6 @@ nav ul li:nth-child(4) a:hover{
 
 .member ul img:hover{
     transform: scale(1.2);
-}
-
-.member p{
-    font-size: 0.8rem;
-    margin-top: 10px;
 }
 
 .member-img{
