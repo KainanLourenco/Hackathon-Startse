@@ -40,7 +40,6 @@ main{
     width: 40vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(2px);
     z-index: 1;
 }
 
@@ -113,6 +112,11 @@ input{
     padding: 10px;
 }
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 button{
     width: 400px;
     height: 40px;
@@ -150,21 +154,13 @@ form span{
    flex-direction: column;
 }
 
-form #name-container{
+form #name-container, form #contact-container, form #password-container, form #birthdate-container{
     display: flex;
 }
 
 form #address-container{
     display: flex;
     flex-flow: row wrap;
-}
-
-form #contact-container{
-    display: flex;
-}
-
-form #password-container{
-    display: flex;
 }
 
 form #birthdate-container{
@@ -195,16 +191,12 @@ div span:not(:last-child){
         position: static;
     }
 
-    form #name-container, #contact-container, #password-container{
+    form #name-container, #contact-container, #password-container, #birthdate-container{
         flex-direction: column;
     }
 
     div span:not(:last-child){
         margin-right: 0;
-    }
-
-    form #birthdate-container{
-        align-self: auto;
     }
 
     button{
@@ -245,10 +237,6 @@ div span:not(:last-child){
         width: 100vw;
         height: 100vh;
         position: static;
-    }
-
-    form #birthdate-container{
-        align-self: auto;
     }
 
     button{
