@@ -24,7 +24,7 @@
     }
 
     #header-content h2{
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
 
     #header-content h2 br{
@@ -39,6 +39,10 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
+    }
+
+    #header-input button{
+        width: 90%;
     }
 
     .customer-company-info {
@@ -148,4 +152,10 @@
         margin-top: 20px;
     }
 
+}
+
+@media only screen and (min-width: 1200px) {
+    #header-content{
+        width: 800px;
+    }
 }

@@ -27,27 +27,56 @@ header #model{
 }
 
 #header-content{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 40px 50px 0 50px;
     gap: 30px;
     position: relative;
+    min-width: 520px;
+    max-width: 60%;
 }
 
-#header-content h2{
+#header-content h1{
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
+#header-content h2{
+    font-size: 1.25rem;
+    font-weight:400;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+#header-content h3{
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
 #header-input{
+    width: 100%;
     height: 45vh;
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#card-list{
+    width: 90%;
+    height:calc(90% - 1rem - 45px);
 }
 
 .customer-company-info{
+    max-width: calc(50% - 10px);
     min-width: 275px;
     background-color: var(--secondary-color);
     border-radius: 10px;
@@ -64,7 +93,25 @@ header #model{
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 0.25rem;
+    font-weight: 500 !important;
     text-align: center;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.customer-company-info ul {
+    list-style: none;
+    text-align: justify;
+}
+.customer-company-info ul li{
+
+    box-sizing: border-box;
+    padding: 2px 4px;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.customer-company-info ul li:nth-child(odd){
+    background-color: rgba(148, 172, 101, 0.25);
 }
 
 .customer-company-info button{
