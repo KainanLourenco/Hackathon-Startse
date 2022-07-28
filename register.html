@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/register.css">
@@ -7,97 +8,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar</title>
 </head>
+
 <body>
     <div id="side">
-    <span id="illustration-filter"></span>
-    <img src="images/background-register.jpg" id="illustration">
+        <span id="illustration-filter"></span>
+        <img src="images/background-register.jpg" id="illustration">
     </div>
     <main>
-    <div id="form-container">
-        <div id="apresentation">
-            <img src="images/icon2.png" id="logo">
-            <h2>Novo aqui? Bem-vindo!</h2>
-            <p>Bem vindo! Por favor, preencha os campos.</p>
+        <div id="form-container">
+            <div id="apresentation">
+                <img src="images/icon2.png" id="logo">
+                <h2>Novo aqui? Bem-vindo!</h2>
+                <p>Bem vindo! Por favor, preencha os campos.</p>
+            </div>
+            <h2>Registro</h2>
+            <div class="container">
+                <form class="pages page1">
+                    <div id="name-container">
+                        <span>
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name">
+                        </span>
+                        <span>
+                            <label for="lastname">Sobrenome</label>
+                            <input type="text" name="lastname" id="lastname">
+                        </span>
+                    </div>
+                    <div id="contact-container">
+                        <span>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </span>
+                        <span>
+                            <label for="phone-number">Número de telefone</label>
+                            <input type="number" name="phone-number" id="phone-number">
+                        </span>
+                    </div>
+
+                    <div id="password-container">
+                        <span>
+                            <label for="password">Senha</label>
+                            <input type="password" name="password" id="password">
+                        </span>
+                        <span>
+                            <label for="repeat-password">Repita a senha</label>
+                            <input type="password" name="repeat-password" id="repeat-password">
+                        </span>
+                    </div>
+                    <div id="birthdate-container">
+                        <span>
+                            <label for="birthdate">Data de nascimento</label>
+                            <input type="date" name="birthdate" id="birthdate">
+                        </span>
+                        <span>
+                            <label for="cpf">CPF</label>
+                            <input type="number" name="cpf" id="cpf">
+                        </span>
+                    </div>
+                    <div class="btns">
+                        <button type="button" id="next">Próximo</button>
+                        <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+                    </div>
+                </form>
+
+                <form class="pages page2" action="products.html">
+                    <div id="address-container">
+                        <span>
+                            <label for="street">Endereço</label>
+                            <input type="text" name="street" id="street">
+                        </span>
+                        <span>
+                            <label for="building-number">Número</label>
+                            <input type="number" name="building-number" id="building-number">
+                        </span>
+                        <span>
+                            <label for="complement">Complemento</label>
+                            <input type="text" name="complement" id="complement">
+                        </span>
+                        <span>
+                            <label for="zip-code">CEP</label>
+                            <input type="number" name="zip-code" id="zip-code">
+                        </span>
+                        <span>
+                            <label for="neighborhood">Bairro</label>
+                            <input type="text" name="neighborhood" id="neighborhood">
+                        </span>
+                        <span>
+                            <label for="city">Cidade</label>
+                            <input type="text" name="city" id="city">
+                        </span>
+                        <span>
+                            <label for="state">Estado</label>
+                            <input type="text" name="state" id="state">
+                        </span>
+                        <div id="submit" class="btns">
+                            <button type="button" id="previous">Voltar</button>
+                            <button type="submit">Registrar</button>
+                            <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <h2>Registro</h2>
-        <form action="products.html">
-            <div id="name-container">
-                <span>
-                <label for="name">Nome</label>
-                <input type="text" name="name" id="name">
-                </span>
-                <span>
-                <label for="lastname">Sobrenome</label>
-                <input type="text" name="lastname" id="lastname">
-                </span>
-            </div>      
-            <div id="contact-container">
-            <span>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-            </span>
-            <span>
-            <label for="phone-number">Número de telefone</label>
-            <input type="number" name="phone-number" id="phone-number">
-            </span>
-            </div>
-            <!--
-            <div id="address-container">
-                <span>
-                <label for="street">Endereço</label>
-                <input type="text" name="street" id="street">
-                </span>
-                <span>
-                <label for="street">Número</label>
-                <input type="number" name="building-number" id="building-number">
-                </span>
-                <span>
-                <label for="street">CEP</label>
-                <input type="number" name="zip-code" id="zip-code">
-                </span>
-                <span>
-                <label for="street">Complemento</label>
-                <input type="text" name="complement" id="complement">
-                </span>
-                <span>
-                <label for="street">Bairro</label>
-                <input type="text" name="neighborhood" id="neighborhood">
-                </span>
-                <span>
-                <label for="street">Cidade</label>
-                <input type="text" name="city" id="city">
-                </span>
-                <span>
-                <label for="street">Estado</label>
-                <input type="text" name="state" id="state">
-                </span>
-            </div>-->
-            <div id="password-container">
-            <span>
-            <label for="password">Senha</label>
-            <input type="password" name="password" id="password">
-            </span>
-            <span>
-            <label for="repeat-password">Repita a senha</label>
-            <input type="password" name="repeat-password" id="repeat-password">
-            </span>
-            </div>
-            <div id="birthdate-container">
-            <span>
-            <label for="birthdate">Data de nascimento</label>
-            <input type="date" name="birthdate" id="birthdate">
-            </span>
-            <span>
-            <label for="cpf">CPF</label>
-            <input type="number" name="cpf" id="cpf">
-            </span>
-            </div>
-            <div id="submit">
-            <button type="submit">Registrar</button>
-            <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
-            </div>
-        </form>
-    </div>
-    
+        <script src="script/multistep.js"></script>
 </body>
+
 </html>
