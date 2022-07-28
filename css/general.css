@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* CSS específico para definir características da barra de menu lateral e do footer, que serão usados em múltiplas 
-páginas. Além de configurações gerais e variáveis */
-
 /* Reset CSS */
 
 *{
@@ -11,7 +8,6 @@ páginas. Além de configurações gerais e variáveis */
     padding: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
-    
 }
 
 /* General */
