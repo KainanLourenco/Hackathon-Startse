@@ -118,7 +118,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 }
 
 button{
-    width: 400px;
+    width: 350px;
     height: 40px;
     border-radius: 5px;
     background-color: var(--primary-color);
@@ -137,7 +137,7 @@ form p{
     text-align: center;
 }
 
-#submit p a{
+.btns p a{
     text-decoration: none;
     color: black;
     font-weight: 600;
@@ -161,19 +161,49 @@ form #name-container, form #contact-container, form #password-container, form #b
 form #address-container{
     display: flex;
     flex-flow: row wrap;
-}
-
-form #birthdate-container{
-    align-self: flex-start;
-}
-
-form #submit{
-    margin-top: 40px;
+    justify-content: center;
 }
 
 div span:not(:last-child){
     margin-right: 20px;
 }
+
+/* Multistep Form */
+
+.container {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page1 {
+    width: 100%;
+    position: relative;
+    left: 0;
+    transition: 0.5s ease;
+}
+
+.page2 {
+    width: 60vw;
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    left: 60vw;
+    transition: 0.5s ease;
+}
+
+#complement {
+    width: 620px;
+}
+
+.btns {
+    margin-top: 40px;
+}
+
+/* Media queries */
 
 @media only screen and (max-width: 700px){
     
@@ -209,6 +239,7 @@ div span:not(:last-child){
         gap: 5px;
         color: black;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     #apresentation p{
@@ -220,6 +251,23 @@ div span:not(:last-child){
         width: 80px;
         height: 80px;
         margin-bottom: 20px;
+    }
+
+    form #address-container{
+        flex-flow: column wrap;
+    }
+
+    #complement{
+        width: 300px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .page2 {
+        width: 100%;
+        left: 100%;
     }
 
 }
@@ -239,10 +287,6 @@ div span:not(:last-child){
         position: static;
     }
 
-    button{
-        width: 100%;
-    }
-
     #apresentation{
         position: static;
         align-items: center;
@@ -256,6 +300,15 @@ div span:not(:last-child){
         width: 80px;
         height: 80px;
         margin-bottom: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .page2 {
+        width: 100%;
+        left: 100%;
     }
 
 }
