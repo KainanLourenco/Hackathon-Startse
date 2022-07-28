@@ -2,37 +2,97 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="icon" href="images/icon2.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar</title>
 </head>
 <body>
-    <a href="index.html"><img src="images/icon2.png" id="logo"></a>
+    <div id="side">
+    <span id="illustration-filter"></span>
+    <img src="images/background-register.jpg" id="illustration">
+    </div>
     <main>
     <div id="form-container">
         <div id="apresentation">
-        <h2>Novo aqui? Bem-vindo!</h2>
-        <p>Bem vindo! Por favor preencha os campos.</p>
+            <img src="images/icon2.png" id="logo">
+            <h2>Novo aqui? Bem-vindo!</h2>
+            <p>Bem vindo! Por favor, preencha os campos.</p>
         </div>
-        <form>
+        <h2>Registro</h2>
+        <form action="products.html">
+            <div id="name-container">
+                <span>
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name">
+                </span>
+                <span>
+                <label for="lastname">Sobrenome</label>
+                <input type="text" name="lastname" id="lastname">
+                </span>
+            </div>      
+            <div id="contact-container">
+            <span>
             <label for="email">Email</label>
             <input type="email" name="email" id="email">
+            </span>
+            <span>
+            <label for="phone-number">Número de telefone</label>
+            <input type="number" name="phone-number" id="phone-number">
+            </span>
+            </div>
+            <!--
+            <div id="address-container">
+                <span>
+                <label for="street">Endereço</label>
+                <input type="text" name="street" id="street">
+                </span>
+                <span>
+                <label for="street">Número</label>
+                <input type="number" name="building-number" id="building-number">
+                </span>
+                <span>
+                <label for="street">CEP</label>
+                <input type="number" name="zip-code" id="zip-code">
+                </span>
+                <span>
+                <label for="street">Complemento</label>
+                <input type="text" name="complement" id="complement">
+                </span>
+                <span>
+                <label for="street">Bairro</label>
+                <input type="text" name="neighborhood" id="neighborhood">
+                </span>
+                <span>
+                <label for="street">Cidade</label>
+                <input type="text" name="city" id="city">
+                </span>
+                <span>
+                <label for="street">Estado</label>
+                <input type="text" name="state" id="state">
+                </span>
+            </div>-->
+            <div id="password-container">
+            <span>
             <label for="password">Senha</label>
             <input type="password" name="password" id="password">
+            </span>
+            <span>
             <label for="repeat-password">Repita a senha</label>
             <input type="password" name="repeat-password" id="repeat-password">
-            <button type="submit">Sign In</button>
+            </span>
+            </div>
+            <div id="birthdate-container">
+            <span>
+            <label for="birthdate">Data de nascimento</label>
+            <input type="date" name="birthdate" id="birthdate">
+            </span>
+            </div>
+            <div id="submit">
+            <button type="submit">Registrar</button>
             <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+            </div>
         </form>
-    </div>
-    <img src="images/background.jpg" id="background">
-    </main>
-    <div id="background-overlay">
-        <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been<br> the industry's standard dummy text ever" </p>
-        <h4>Fulano Ciclano</h4>
-        <span><h5>Fullstack</h5><h5>Nome da empresa</h5></span>
-        <img src="images/feather-icon.png" id="quote">
     </div>
     
 </body>
