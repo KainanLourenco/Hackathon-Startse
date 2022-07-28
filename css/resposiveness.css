@@ -18,7 +18,7 @@
     }
 
     #header-content{
-        width: 100%;
+        max-width: 100%;
         padding: 20px 10px;
         margin-top: 0;
     }
@@ -50,7 +50,7 @@
     }
 
     #card-list{
-        width: 370px;
+        width: 350px;
     }
 
     /* How to */
