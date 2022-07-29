@@ -85,6 +85,7 @@ main {
 
 .content {
     width: 70%;
+    counter-reset: h2;
 }
 
 .content .post-date span {
@@ -97,9 +98,18 @@ main {
     color: rgb(51, 51, 51);
 }
 
+.content h2::before {
+    counter-increment: h2;
+    content: counter(h2) " - ";
+}
+
 .content p {
     text-align: justify;
-    margin-bottom: 20px;
+    margin: 20px 0;
+}
+
+.content ul {
+    margin-left: 20px;
 }
 
 .content p:last-child {
@@ -108,9 +118,18 @@ main {
 
 .content-img {
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
     margin-bottom: 20px;
+}
+
+.content a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+
+.content a:hover {
+    text-decoration: underline;
 }
 
 /* Other articles */
@@ -122,6 +141,7 @@ main {
     flex-direction: column;
     gap: 20px;
     padding: 20px 20px 40px 20px;
+    margin-top: 40px;
     color: rgb(51, 51, 51);
 }
 
