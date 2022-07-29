@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/register.css">
@@ -7,89 +8,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financiadores</title>
 </head>
+
 <body>
     <div id="side">
-    <span id="illustration-filter"></span>
-    <img src="images/background-financier.jpg" id="illustration">
+        <span id="illustration-filter"></span>
+        <img src="images/background-financier.jpg" id="illustration">
     </div>
     <main>
-    <div id="form-container">
-        <div id="apresentation">
-            <img src="images/icon2.png" id="logo">
-            <h2>Bem-vindo, financiador!</h2>
-            <p>Espero que possamos te ajudar.<br> Por favor, preencha os campos</p>
+        <div id="form-container">
+            <div id="apresentation">
+                <img src="images/icon2.png" id="logo">
+                <h2>Bem-vindo, financiador!</h2>
+                <p>Espero que possamos te ajudar.<br> Por favor, preencha os campos</p>
+            </div>
+            <h2>Registro</h2>
+            <form action="products-financier.html">
+                <div id="name-container">
+                    <span>
+                        <label for="tranding-name">Nome da empresa</label>
+                        <input type="text" name="tranding-name" id="tranding-name">
+                    </span>
+                    <span>
+                        <label for="cnpj">CNPJ</label>
+                        <input type="number" name="cnpj" id="cnpj">
+                    </span>
+                </div>
+                <div id="contact-container">
+                    <span>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </span>
+                    <span>
+                        <label for="phone-number">Número de telefone</label>
+                        <input type="number" name="phone-number" id="phone-number">
+                    </span>
+                </div>
+                <div id="password-container">
+                    <span>
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password">
+                    </span>
+                    <span>
+                        <label for="repeat-password">Repita a senha</label>
+                        <input type="password" name="repeat-password" id="repeat-password">
+                    </span>
+                </div>
+                <div id="birthdate-container">
+                </div>
+                <div id="submit">
+                    <button type="submit">Registrar</button>
+                    <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+                </div>
+            </form>
         </div>
-        <h2>Registro</h2>
-        <form action="products.html">
-            <div id="name-container">
-                <span>
-                <label for="tranding-name">Nome da empresa</label>
-                <input type="text" name="tranding-name" id="tranding-name">
-                </span>
-                <span>
-                <label for="cnpj">CNPJ</label>
-                <input type="number" name="cnpj" id="cnpj">
-                </span>
-            </div>      
-            <div id="contact-container">
-            <span>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-            </span>
-            <span>
-            <label for="phone-number">Número de telefone</label>
-            <input type="number" name="phone-number" id="phone-number">
-            </span>
-            </div>
-            <!--
-            <div id="address-container">
-                <span>
-                <label for="street">Endereço</label>
-                <input type="text" name="street" id="street">
-                </span>
-                <span>
-                <label for="street">Número</label>
-                <input type="number" name="building-number" id="building-number">
-                </span>
-                <span>
-                <label for="street">CEP</label>
-                <input type="number" name="zip-code" id="zip-code">
-                </span>
-                <span>
-                <label for="street">Complemento</label>
-                <input type="text" name="complement" id="complement">
-                </span>
-                <span>
-                <label for="street">Bairro</label>
-                <input type="text" name="neighborhood" id="neighborhood">
-                </span>
-                <span>
-                <label for="street">Cidade</label>
-                <input type="text" name="city" id="city">
-                </span>
-                <span>
-                <label for="street">Estado</label>
-                <input type="text" name="state" id="state">
-                </span>
-            </div>-->
-            <div id="password-container">
-            <span>
-            <label for="password">Senha</label>
-            <input type="password" name="password" id="password">
-            </span>
-            <span>
-            <label for="repeat-password">Repita a senha</label>
-            <input type="password" name="repeat-password" id="repeat-password">
-            </span>
-            </div>
-            <div id="birthdate-container">
-            </div>
-            <div id="submit">
-            <button type="submit">Registrar</button>
-            <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
-            </div>
-        </form>
-    </div>
-    
+
 </body>
+
 </html>

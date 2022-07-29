@@ -18,6 +18,10 @@
     --hover-color: #94ac65;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Sidebar */
 
 .sidebar {
