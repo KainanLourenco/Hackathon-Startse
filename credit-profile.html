@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/credit-profile.css">
@@ -8,72 +9,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de crédito</title>
 </head>
+
 <body>
     <main>
-    <div id="container">
-        <div id="logo">
-            <img src="images/icon.png">
-            <h4>Credit<br> Match</h4>
-        </div>
-    <div id="form-container">
-        <form>
-            <label for="borrower-type">Tipo:</label>
-            <select id="borrower-type">
-                <option value="individual">Individual</option>
-                <option value="company">Empresa</option>
-            </select>
-            <div id="amount">
-            <span>
-            <label for="desired-amount">Quantia desejada:</label>
-            <input type="number" id="desired-amount">
-            </span>
-            <span>
-            <label for="max-installment-amount">Valor máximo de parcela</label>
-            <input type="number">
-            </span>
+        <div id="container">
+            <div id="logo">
+                <img src="images/icon.png">
+                <h4>Credit<br> Match</h4>
             </div>
-            <label for="payment-plan">Plano de pagamento:</label>
-            <select id="payment-plan">
-                <option value="monthly">Mensal</option>
-                <option value="bullet">Balão</option>
-            </select>
-            <div id="confirm-asset">
-            <label for="has-assets">Tem ativos?</label>
-            <input type="checkbox" id="has-assets">
+            <div id="form-container">
+                <form>
+                    <label for="borrower-type">Tipo:</label>
+                    <select id="borrower-type">
+                        <option value="individual">Individual</option>
+                        <option value="company">Empresa</option>
+                    </select>
+                    <div id="amount">
+                        <span>
+                            <label for="desired-amount">Quantia desejada:</label>
+                            <input type="number" id="desired-amount">
+                        </span>
+                        <span>
+                            <label for="max-installment-amount">Valor máximo de parcela</label>
+                            <input type="number">
+                        </span>
+                    </div>
+                    <label for="payment-plan">Plano de pagamento:</label>
+                    <select id="payment-plan">
+                        <option value="monthly">Mensal</option>
+                        <option value="bullet">Balão</option>
+                    </select>
+                    <div id="confirm-asset">
+                        <label for="has-assets">Tem ativos?</label>
+                        <input type="checkbox" id="has-assets">
+                    </div>
+                    <div id="assets">
+                        <label for="asset-type">Tipo de ativo:</label>
+                        <select id="asset-type">
+                            <option value="vehicle">Veículo</option>
+                            <option value="home">Casa</option>
+                            <option value="credit-card-receivables">Recebíveis de cartão</option>
+                            <option value="accounts-receivables">Duplicata</option>
+                            <option value="salary">Salário</option>
+                        </select>
+                        <div id="estimated">
+                            <span>
+                                <label for="total-estimated-value">Valor total estimado</label>
+                                <input type="number" id="total-estimated-value">
+                            </span>
+                            <span>
+                                <label for="monthly-estimated-income">Renda mensal estimada</label>
+                                <input type="number" id="monthly-estimated-income">
+                            </span>
+                        </div>
+                    </div>
+                    <button type="button" onclick="window.location.href = 'register.html'">Enviar</button>
+                </form>
             </div>
-            <div id="assets">
-                <label for="asset-type">Tipo de ativo:</label>
-                <select id="asset-type">
-                    <option value="vehicle">Veículo</option>
-                    <option value="home">Casa</option>
-                    <option value="credit-card-receivables">Recebíveis de cartão</option>
-                    <option value="accounts-receivables">Duplicata</option>
-                    <option value="salary">Salário</option>
-                </select>
-                <div id="estimated">
-                <span>
-                <label for="total-estimated-value">Valor total estimado</label>
-                <input type="number" id="total-estimated-value">
-                </span>
-                <span>
-                <label for="monthly-estimated-income">Renda mensal estimada</label>
-                <input type="number" id="monthly-estimated-income">
-                </span>
+            <div id="container-img">
+                <img src="images/background-survey.jpg">
+                <div id="apresentation">
+                    <h2>Responda ao questionário</h2>
+                    <h4>Iremos traçar seu perfil para sugerirmos o produto que mais combina com você!</h4>
                 </div>
             </div>
-            <button type="button">Enviar</button>
-        </form>
-    </div>
-    <div id="container-img">
-        <img src="images/background-survey.jpg">
-        <div id="apresentation">
-            <h2>Responda ao questionário</h2>
-            <h4>Iremos traçar seu perfil para sugerirmos o produto que mais combina com você!</h4>
+
         </div>
-    </div>
 
-    </div>
-
-    <script src="script/survey.js"></script>
+        <script src="script/survey.js"></script>
 </body>
+
 </html>
