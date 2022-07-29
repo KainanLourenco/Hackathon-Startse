@@ -30,28 +30,46 @@ header #model{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px 50px 0 50px;
-    gap: 30px;
-    position: relative;
+    padding: 30px 50px 0 50px;
+    gap: 10px;
 }
 
-#header-content h2{
+#header-content h1{
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    border-bottom: 2px solid var(--secondary-color);
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
+#header-content h2{
+    font-size: 1.25rem;
+    font-weight:400;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+#header-content h3{
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
 #header-input{
-    height: 45vh;
+    width: 100%;
+    height: 50vh;
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .customer-company-info{
-    min-width: 275px;
     background-color: var(--secondary-color);
     border-radius: 10px;
     height: 100%;
+    width: 50%;
     padding: 10px 10px;
     color: var(--primary-color);
     display: flex;
@@ -64,7 +82,25 @@ header #model{
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 0.25rem;
+    font-weight: 500 !important;
     text-align: center;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.customer-company-info ul {
+    list-style: none;
+    text-align: justify;
+}
+.customer-company-info ul li{
+
+    box-sizing: border-box;
+    padding: 2px 4px;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.customer-company-info ul li:nth-child(odd){
+    background-color: rgba(148, 172, 101, 0.25);
 }
 
 .customer-company-info button{
@@ -119,7 +155,6 @@ nav ul {
 }
 
 nav a{
-    box-sizing: border-box;
     padding: 8px;
     text-decoration: none;
     text-transform: uppercase;
@@ -153,18 +188,6 @@ nav ul li:nth-child(4) a{
 nav ul li:nth-child(4) a:hover{
     background-color: var(--hover-color);
     color: white;
-}
-
-#nav-logo{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 40px;
-    z-index: 0;
-}
-#nav-logo img{
-    width: auto;
-    height: 40px;
 }
 
 /* How to */
@@ -416,7 +439,7 @@ nav ul li:nth-child(4) a:hover{
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 360px;
+    height: auto;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
 }
