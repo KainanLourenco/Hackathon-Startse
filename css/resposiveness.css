@@ -47,7 +47,11 @@
     }
 
     .customer-company-info {
-        width: 100%;
+        max-width: 100%;
+    }
+
+    #card-list{
+        width: 350px;
     }
 
     .card-list{
